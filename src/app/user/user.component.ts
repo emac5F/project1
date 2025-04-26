@@ -8,6 +8,15 @@ import { GamesComponent } from '../games/games.component';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  username: string = 'Edith A';
-  isLoggedIn: boolean = true;
+  username: string = 'Edith Avendaño';
+  isLoggedIn: boolean = false; // esta funcionando como un estado
+  //recuperamos el evento emitido por el hijo(app-games) y lo guardamos en una variable
+  favGame: string = '';
+  getFavorite(gameName: string) {
+    this.favGame = gameName;
+  }
+
+  greet(){
+    alert('hola!');
+  }
 }
