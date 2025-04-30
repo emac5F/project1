@@ -1,4 +1,20 @@
 <!-- <h1>Hola Angular, como estas?</h1> -->
+<!-- parte trabajada con yt2:amazaing code con la carpeta components -->
+<app-header></app-header>
+<h1>Hola {{userName}}</h1>
+<h2>Number: {{ number }}</h2>
+<!-- eventos> () >va del html al ts -->
+ <!-- databinding> [] >va del ts al html -->
+<input type="text" [(ngModel)]="userName" (input)="addOne()" />
+
+<!-- <h1 (click)="addOne()">Number: {{number}}</h1> -->
+
+
+
+
+
+<!-- de aqui para abajo se trabajo con yt1:midudev
+ en componentes que estan fuera de la carpeta components -->
 <app-user/>
 
 <!-- trabajando con el componente de comments -->
