@@ -9,7 +9,31 @@
 
 <!-- <h1 (click)="addOne()">Number: {{number}}</h1> -->
 
+<!-- if -->
+<h1>Bloque &#64;if - Renderizado dinamico</h1>
+@if (condition) {
+    <h2>La condicion se cumple</h2>
+}
+@else if (condition2) {
+    <h2>La condicion2 se cumple</h2>
+}
+@else {
+    <h2>Las condiciones no se cumplen</h2>
+}
+<!-- for -->
+<h1>Bloque &#64;for - Renderizado de listas</h1>
+@for (movie of movies; track movie) {
+    <p>{{ $index + 1 }} - {{ movie }}</p>
+}
 
+<ul>
+    @for (animal of animals; track animal.id) {
+        <li>
+            <h2>{{ animal.name }} </h2>
+            <img [src]="animal.img" alt="animals" width="200" height="200" />
+        </li>
+    }
+</ul>
 
 
 
