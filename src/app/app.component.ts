@@ -5,11 +5,12 @@ import { CommentsComponent } from "./comments/comments.component"; // Import the
 
 import { HeaderComponent } from './components/header/header.component'; //trabajando con la carpeta de components
 import { FormsModule } from '@angular/forms';
+import { ChildComponent } from "./components/child/child.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, CommentsComponent, HeaderComponent, FormsModule], // Import the UserComponent here
+  imports: [RouterOutlet, UserComponent, CommentsComponent, HeaderComponent, FormsModule, ChildComponent], // Import the UserComponent here
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
@@ -61,6 +62,14 @@ export class AppComponent {
         img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Beautiful_Zebra_in_South_Africa.JPG/800px-Beautiful_Zebra_in_South_Africa.JPG',
     },
   ];
+
+  // component child
+  text: string = 'variable desde el padre!'; // Example text to pass to child component
+
+  person: any = {
+    sex: 'Mujer',
+    age: 25
+  }; // Example object to pass to child component
 }
 
 
