@@ -1,5 +1,5 @@
-<!-- trabajando con RUTAS - carpeta pages -->
 <router-outlet></router-outlet>
+<!-- trabajando con RUTAS - carpeta pages -->
 
 
 <h1>ngClass | clases Dinamicas</h1>
@@ -47,10 +47,10 @@
  <h1>&#64; input - comunicacion padre-hijo</h1>
  <app-child [msg]="text" [person]="person"></app-child>
 
-<!-- component header -->
+<!-- component child0 -->
 <h1>&#64; Output | Comunicacion hijo-padre</h1>
 <h2>Hola {{ name }} </h2>
- <app-header (login)="setName($event)"></app-header>
+ <app-child0 (login)="setName($event)"></app-child0>
 
 <!-- component forms -->
 <app-forms></app-forms>

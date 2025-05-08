@@ -4,18 +4,19 @@ import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { CommentsComponent } from "./comments/comments.component"; // Import the UserComponent
 
-import { HeaderComponent } from './components/header/header.component'; //trabajando con la carpeta de components
+//trabajando con la carpeta de components
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from "./components/child/child.component";
 import Product from './models/product';
 import { FormsComponent } from "./components/forms/forms.component";
 import { Child1Component } from "./components/child1/child1.component";
 import { Child2Component } from "./components/child2/child2.component";
+import { Child0Component } from "./components/child0/child0.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgClass, RouterOutlet, UserComponent, CommentsComponent, HeaderComponent, FormsModule, ChildComponent, FormsComponent, Child1Component, Child2Component], // Import the UserComponent here
+  imports: [NgClass, RouterOutlet, UserComponent, CommentsComponent, FormsModule, ChildComponent, FormsComponent, Child1Component, Child2Component, Child0Component], // Import the UserComponent here
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
@@ -104,7 +105,7 @@ export class AppComponent {
   }; 
 
 
-  // component header(child) de hijo a padre
+  // component child0 de hijo a padre
   name: string = ""; 
 
   // crear funcion q cuando se ejecute modifique el valor de name
