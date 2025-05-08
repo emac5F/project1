@@ -10,3 +10,13 @@ div{
     font-size: 34px;
     margin: 0 auto;
 }
+
+.dark {
+    background-color:brown;
+    color:rgb(189, 237, 100);
+}
+
+.big {
+    font-family: cursive;
+    padding: 10px;
+}

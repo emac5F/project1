@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
@@ -6,11 +7,12 @@ import { CommentsComponent } from "./comments/comments.component"; // Import the
 import { HeaderComponent } from './components/header/header.component'; //trabajando con la carpeta de components
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from "./components/child/child.component";
+import Product from './models/product';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, CommentsComponent, HeaderComponent, FormsModule, ChildComponent], // Import the UserComponent here
+  imports: [NgClass, RouterOutlet, UserComponent, CommentsComponent, HeaderComponent, FormsModule, ChildComponent], // Import the UserComponent here
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
@@ -19,22 +21,45 @@ import { ChildComponent } from "./components/child/child.component";
   // styles: ``,
 })
 export class AppComponent {
+
+  isDark: boolean = true;
+
+  toggleDark(){
+    this.isDark = !this.isDark;  
+  }
+
   title = 'project1';
   city = 'Barcelona';
 
   // components
-  userName: string = 'Edith'; // Example user name
+  userName: string;
+  myNumber: number;
+  myBoolean: boolean;
+  // usando models - interfaces
+  product: Product; 
+
+  // usar CONSTRUCTORES es buena practica, se usa en cosas complejas
+  constructor() {
+    this.userName = 'Edith'; 
+    this.myNumber = 10;
+    this.myBoolean = true; 
+    this.product = {
+      name: 'Computer',
+      price: 1000,
+      isForSale: true
+    }; 
+  }
   
-  number: number = 0; // Example number
+  number: number = 0; 
   addOne() {
-    this.number++; // Increment the number by 1
+    this.number++; 
   }
 
   // bloque @if
-  condition: boolean = false; // Example condition
-  condition2: string = ""; // Example condition
+  condition: boolean = false; 
+  condition2: string = ""; 
   // bloque @for
-  movies: string[] = ['Avatar', 'Titanic', 'Star Wars', 'Harry Potter']; // Example array of movies
+  movies: string[] = ['Avatar', 'Titanic', 'Star Wars', 'Harry Potter']; 
   animals: any = [
     {
         id: 1,
@@ -63,21 +88,25 @@ export class AppComponent {
     },
   ];
 
+
+
+
+
   // component child
   text: string = 'variable desde el padre!'; // Example text to pass to child component
 
   person: any = {
     sex: 'Mujer',
     age: 25
-  }; // Example object to pass to child component
+  }; 
 
 
   // component header(child) de hijo a padre
-  name: string = ""; // Example name to pass to header component
+  name: string = ""; 
 
   // crear funcion q cuando se ejecute modifique el valor de name
   setName(e: any) {
-    this.name = e; // Set the name to the value emitted from the child component
+    this.name = e; 
   }
 }
 
