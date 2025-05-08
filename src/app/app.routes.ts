@@ -8,6 +8,6 @@ export const routes: Routes = [
     // trabajando con RUTAS - carpeta pages
     {path: '', component: HomeComponent},
     {path: 'movies', component: MovieListComponent},
-    {path: 'create', component: MovieFormPageComponent},
-    {path: 'movies/:movieName', component: MovieDetailsComponent} 
+    {path: 'movies/:movieName', component: MovieDetailsComponent}, 
+    {path: 'create', component: MovieFormPageComponent}
 ];

@@ -1,1 +1,10 @@
-<p>movie-details works!</p>
+<app-header></app-header>
+
+<!-- si encuentra la peli -->
+@if (selectedMovie){
+    <h2>{{ selectedMovie.name }} </h2>
+    <h2>{{ selectedMovie.duration }} </h2>
+    <h2>{{ selectedMovie.director }} </h2>
+} @else {
+    <h2>No existe ninguna pelicula con ese titulo</h2>
+}

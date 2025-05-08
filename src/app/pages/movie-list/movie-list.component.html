@@ -4,10 +4,14 @@
 
 <ul class="movie-list">
     @for (movie of movieService.movies; track $index){
-        <li class="movie-item">
-            <h2>{{ movie.name }} </h2>
-            <h3>{{ movie.duration }} </h3>
-            <h3>{{ movie.director }} </h3>
+        <li>
+            <a class="link" [routerLink]="movie.name">
+                <div class="movie-container">
+                    <h2>{{ movie.name }} </h2>
+                    <h3>{{ movie.duration }} </h3>
+                    <h3>{{ movie.director }} </h3>
+                </div>
+            </a>
         </li>
     }
 </ul>

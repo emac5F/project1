@@ -1,7 +1,12 @@
 .movie-list{
     margin: 30px;
 
-    .movie-item{
+    .link{
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .movie-container{
         padding-left: 20px;
         background-color: coral;
         border-bottom: 2px solid black;
@@ -10,7 +15,7 @@
         align-items: center;
         gap: 20px;
     }
-    .movie-item:hover{
+    .movie-container:hover{
         background-color:cornflowerblue;
     }
 }
