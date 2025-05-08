@@ -8,11 +8,12 @@ import { HeaderComponent } from './components/header/header.component'; //trabaj
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from "./components/child/child.component";
 import Product from './models/product';
+import { FormsComponent } from "./components/forms/forms.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgClass, RouterOutlet, UserComponent, CommentsComponent, HeaderComponent, FormsModule, ChildComponent], // Import the UserComponent here
+  imports: [NgClass, RouterOutlet, UserComponent, CommentsComponent, HeaderComponent, FormsModule, ChildComponent, FormsComponent], // Import the UserComponent here
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
