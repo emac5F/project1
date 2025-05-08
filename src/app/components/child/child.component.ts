@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,9 +7,15 @@ import { Component, Input } from '@angular/core';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
-  @Input() 
-  msg: string = ''; // Example input property
+  //usando decoradores
+  // @Input() 
+  // msg: string = ''; // Example input property
 
-  @Input()
-  person: any;
+  // @Input()
+  // person: any;
+
+  // usando signals - nueva sintaxis(recomendado)
+  msg = input<string>(''); // Example input property
+
+  person = input<any>(); // Example input property
 }

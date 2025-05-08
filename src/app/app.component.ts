@@ -70,6 +70,15 @@ export class AppComponent {
     sex: 'Mujer',
     age: 25
   }; // Example object to pass to child component
+
+
+  // component header(child) de hijo a padre
+  name: string = ""; // Example name to pass to header component
+
+  // crear funcion q cuando se ejecute modifique el valor de name
+  setName(e: any) {
+    this.name = e; // Set the name to the value emitted from the child component
+  }
 }
 
 

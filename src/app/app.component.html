@@ -1,6 +1,5 @@
 <!-- <h1>Hola Angular, como estas?</h1> -->
 <!-- parte trabajada con yt2:amazaing code con la carpeta components -->
-<app-header></app-header>
 <h1>Hola {{userName}}</h1>
 <h2>Number: {{ number }}</h2>
 <!-- eventos> () >va del html al ts -->
@@ -41,7 +40,10 @@
  <h1>&#64; input - comunicacion padre-hijo</h1>
  <app-child [msg]="text" [person]="person"></app-child>
 
-
+<!-- component header -->
+<h1>&#64; Output | Comunicacion hijo-padre</h1>
+<h2>Hola {{ name }} </h2>
+ <app-header (login)="setName($event)"></app-header>
 
 
 <!-- de aqui para abajo se trabajo con yt1:midudev
