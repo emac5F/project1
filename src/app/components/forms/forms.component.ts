@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-forms',
@@ -14,7 +15,7 @@ export class FormsComponent {
   duration: FormControl;
   director: FormControl;
 
-  constructor() {
+  constructor(public movieService: MovieService) {
     this.name = new FormControl('', Validators.required);
     this.duration = new FormControl('', [Validators.required, Validators.max(300)]);
     this.director = new FormControl('');
@@ -28,6 +29,7 @@ export class FormsComponent {
   // metodo
   handleSubmit(): void {
     console.log(this.movieForm.value);
+    this.movieService.addMovie(this.movieForm.value);
     this.movieForm.reset();
   }
 }
