@@ -14,6 +14,7 @@ export class FormsComponent {
   name: FormControl;
   duration: FormControl;
   director: FormControl;
+  sentMsg = "";
 
   constructor(public movieService: MovieService) {
     this.name = new FormControl('', Validators.required);
@@ -28,8 +29,9 @@ export class FormsComponent {
 
   // metodo
   handleSubmit(): void {
-    console.log(this.movieForm.value);
+    console.log('Movie created:', this.movieForm.value);
     this.movieService.addMovie(this.movieForm.value);
     this.movieForm.reset();
+    this.sentMsg = "Enviado";
   }
 }
