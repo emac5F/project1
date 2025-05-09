@@ -21,6 +21,7 @@ export class UserListComponent implements OnInit {
     this.userService.getUsers().subscribe({
       // esto se va a ejecutar cuando la peticion sea exitosa
       next: (data) => {
+        console.log(data);
         this.userService.users = data;
       },
       // esto se va a ejecutar cuando la peticion falle

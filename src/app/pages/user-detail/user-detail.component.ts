@@ -27,7 +27,7 @@ export class UserDetailComponent {
         this.selectedUser = data;
       },
       error: (error) => {
-        console.error(error);
+        console.log(error);
       }
     });
   }

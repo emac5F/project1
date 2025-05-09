@@ -8,8 +8,8 @@ import User from '../models/user';
 export class UserService {
   // consumir bdAPI
   // readonly--> es una variable constante
-  readonly API_URL = "https://jsonplaceholder.typicode.com/users";
-  // readonly API_URL = 'https://ca8d440d5f971164a0b0.free.beeceptor.com/api/users';
+  //rehttps:caf41d8964f680e32bf2.free.beeceptor.com/api/users/adonly API_URL = "https://jsonplaceholder.typicode.com/users";
+  readonly API_URL = "https://caf41d8964f680e32bf2.free.beeceptor.com/api/users/";
   
   users: User[];
 
