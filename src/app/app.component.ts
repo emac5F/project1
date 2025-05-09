@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { CommentsComponent } from "./comments/comments.component"; // Import the UserComponent
@@ -24,7 +24,7 @@ import { Child0Component } from "./components/child0/child0.component";
   //   <app-user></app-user><app-user/>`,
   // styles: ``,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   isDark: boolean = true;
 
@@ -53,6 +53,17 @@ export class AppComponent {
       isForSale: true
     }; 
   }
+
+  //usando ngOnInit
+  // constructor2() {
+  //   console.log("destro del constructor");
+  // }
+  // sirve para aplicar logica inicial, llamar apis, servicios
+  ngOnInit(): void {
+    console.log("dentro del ngOnInit");
+  }
+
+
   
   number: number = 0; 
   addOne() {
