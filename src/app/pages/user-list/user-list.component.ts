@@ -29,4 +29,16 @@ export class UserListComponent implements OnInit {
       }
     });
   }
+
+  deleteUser(id: number) {
+    this.userService.deleteUser(id).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.getUsers();
+      },
+      error: (e) => {
+        console.log(e);
+      },
+    });
+  }
 }

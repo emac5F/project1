@@ -12,16 +12,18 @@ import { UserService } from '../../services/user.service';
 export class UserDetailComponent {
   selectedUser: any;
 
-  constructor(private route: ActivatedRoute, public userService: UserService) {}
+  // constructor(private route: ActivatedRoute, public userService: UserService) {}
+  constructor(public userService: UserService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.getUser(id);
   }
 
-  getUser(id: number) {
+  getUser(id: string) {
     this.userService.getUser(id).subscribe({
       next: (data) => {
+        console.log(data);
         this.selectedUser = data;
       },
       error: (error) => {
