@@ -1,0 +1,16 @@
+.header {
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+    
+        .link {
+            color: burlywood;
+            text-decoration: none;
+        }
+    }
+}

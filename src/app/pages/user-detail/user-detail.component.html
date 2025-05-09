@@ -1,0 +1,7 @@
+<app-header-user></app-header-user>
+
+@if (selectedUser){
+    <h2>{{ selectedUser.name }} </h2>
+} @else {
+    <h3>No hay ningun usuario con ese id</h3>
+}
